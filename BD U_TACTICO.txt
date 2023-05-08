@@ -1,0 +1,130 @@
+CREATE TABLE Usuario (
+    cedula INTEGER PRIMARY KEY NOT NULL,
+    nombre VARCHAR(50) NOT NULL,
+    contrasena VARCHAR(50) NOT NULL
+);
+
+//------------ LA TABLA USUARIO FUE LA QUE SE USO --------------//
+
+CREATE TABLE Punto (
+  id INT NOT NULL PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+  descripcion VARCHAR(100) NOT NULL,
+  latitud DECIMAL(10, 8),
+  longitud DECIMAL(11, 8)
+);
+
+CREATE TABLE Estado (
+  id INT NOT NULL PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+  nombre VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Senal (
+  id INT NOT NULL PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+  descripcion VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Asignacion (
+  id INT NOT NULL PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+  id_usuario INT NOT NULL,
+  id_punto INT NOT NULL,
+  id_estado INT NOT NULL,
+  id_senal INT NOT NULL,
+  FOREIGN KEY (id_usuario) REFERENCES Usuario(cedula),
+  FOREIGN KEY (id_punto) REFERENCES Punto(id),
+  FOREIGN KEY (id_estado) REFERENCES Estado(id),
+  FOREIGN KEY (id_senal) REFERENCES Senal(id)
+);
+
+
+//-----------------------------------------------------------------
+
+Usuario (cedula) 1 --- N Asignacion (id_usuario)
+Punto (id) 1 --- N Asignacion (id_punto)
+Estado (id) 1 --- N Asignacion (id_estado)
+Senal (id) 1 --- N Asignacion (id_senal)
+
+//----------------------------------------------------------------
+
+Tabla Usuario
++--------+---------+-------------+
+| cedula | nombre  | contrasena   |
++--------+---------+-------------+
+| PK     | NOT NULL| NOT NULL     |
++--------+---------+-------------+
+
+Tabla Punto
++--------+-------------+-------------+--------------+
+| id     | descripcion | latitud     | longitud     |
++--------+-------------+-------------+--------------+
+| PK     | NOT NULL    |             |              |
++--------+-------------+-------------+--------------+
+
+Tabla Estado
++--------+---------+
+| id     | nombre  |
++--------+---------+
+| PK     | NOT NULL|
++--------+---------+
+
+Tabla Senal
++--------+-------------+
+| id     | descripcion |
++--------+-------------+
+| PK     | NOT NULL    |
++--------+-------------+
+
+Tabla Asignacion
++--------+-----------+----------+-----------+-----------+
+| id     | id_usuario| id_punto | id_estado | id_senal  |
++--------+-----------+----------+-----------+-----------+
+| PK     | NOT NULL  | NOT NULL | NOT NULL  | NOT NULL  |
++--------+-----------+----------+-----------+-----------+
+|        | FK        | FK       | FK        | FK        |
++--------+-----------+----------+-----------+-----------+
+
+//---------------------------------------------------------------
+
+
+
+                        +---------+                    +--------+
+                        | Usuario |                    | Estado |
+                        +---------+                    +--------+
+                             |                              |
+                             |                              |
+                             |                              |
+                             |                              |
+             +---------------+--------------+    +----------+----------+
+             |                              |    |                     |
+       +-----------+                +------------+            +-------------+
+       | Asignacion |                | Senal    |            | Punto       |
+       +-----------+                +------------+            +-------------+
+       | id         | <--------------| id         |            | id          |
+       | id_usuario | --|            | descripcion|  |--->     | descripcion |
+       | id_punto   | --|            +------------+            | latitud     |
+       | id_estado  | --|                                       | longitud   |
+       | id_senal   | --|                                       +-------------+
+       +-----------+--|                                           
+                       |                                           
+                       |                                           
+                       |                                           
+                  +----------+                                     
+                  |          |                                     
+                  |          |                                     
+                  |          |                                     
+             +-------+  +----------+                               
+             |        |  |          |                               
+             |        |  |          |                               
+             |        |  |          |                               
+         +------+  +-------+  +----------+                         
+         |      |  |       |  |          |                         
+         |      |  |       |  |          |                         
+         |      |  |       |  |          |                         
+         |cedula|  |nombre |  |id        |                         
+         +------+  +-------+  |nombre    |                         
+                             +----------+         
+
+
+La tabla Usuario tiene una relación de uno a muchos con la tabla Asignacion, ya que un usuario puede tener varias asignaciones, pero cada asignación solo puede pertenecer a un usuario.
+La tabla Estado tiene una relación de uno a muchos con la tabla Asignacion, ya que un estado puede tener varias asignaciones, pero cada asignación solo puede pertenecer a un estado.
+La tabla Senal tiene una relación de uno a muchos con la tabla Asignacion, ya que una señal puede tener varias asignaciones, pero cada asignación solo puede pertenecer a una señal.
+La tabla Punto tiene una relación de uno a muchos con la tabla Asignacion, ya que un punto puede tener varias asignaciones, pero cada asignación solo puede pertenecer a un punto.                
