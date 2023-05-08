@@ -97,7 +97,7 @@
 
                 <div class="form-group">
                     <label class="form-label">Había algún tipo de señalización?</label>
-                    <input class="form-input" type="text" name="tipoSeñal">
+                    <input class="form-input" type="text" name="tipoSenal">
                 </div>
 
                 <div class="
@@ -107,7 +107,7 @@
                 </div>
             </form>
         </div>
-  
+
     </body>
 
 </html>

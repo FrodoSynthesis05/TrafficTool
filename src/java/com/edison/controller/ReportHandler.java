@@ -18,7 +18,7 @@ public class ReportHandler {
         //saveReport("falta de infraestructura", "Accidente en la calle principal", 37.7749, -122.4194, "Pare");
     }
 
-    public static void saveReport(String causa, String descripcion, double latitud, double longitud, String tipoSeñal) {
+    public static void saveReport(String causa, String descripcion, double latitud, double longitud, String tipoSenal) {
         Connection conn = null;
         PreparedStatement stmt = null;
         ResultSet rs = null;
@@ -39,7 +39,7 @@ public class ReportHandler {
             stmt.setString(3, descripcion);
             stmt.setDouble(4, latitud);
             stmt.setDouble(5, longitud);
-            stmt.setString(6, tipoSeñal);
+            stmt.setString(6, tipoSenal);
 
             // Execute the SQL statement
             stmt.executeUpdate();

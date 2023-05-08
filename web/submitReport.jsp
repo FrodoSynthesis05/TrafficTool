@@ -14,7 +14,7 @@
             String descripcion = request.getParameter("descripcion");
             double latitud = Double.parseDouble(request.getParameter("latitud"));
             double longitud = Double.parseDouble(request.getParameter("longitud"));
-            String tipoSeñal = request.getParameter("tipoSeñal");
+            String tipoSeñal = request.getParameter("tipoSenal");
             
             // Create an instance of the ReportHandler class
             ReportHandler reportHandler = new ReportHandler();
