@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="java.util.Arrays" %>
 <%@ page import="com.edison.controller.ReportHandler" %>
 <!DOCTYPE html>
 <html>
@@ -23,6 +22,7 @@
             reportHandler.saveReport(causa, descripcion, latitud, longitud, tipoSeñal);
         %>
         <h1>Report Submitted Successfully</h1>
-        <!-- Display a success message or redirect to a success page -->
+        <%-- Redirect to success.jsp --%>
+        <% response.sendRedirect("success.jsp"); %>
     </body>
 </html>

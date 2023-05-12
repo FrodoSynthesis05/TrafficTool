@@ -21,6 +21,7 @@ public class UsuarioServlet extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
         String action = request.getParameter("action");
 
         String cedulaStr = request.getParameter("cedula");
@@ -53,14 +54,17 @@ public class UsuarioServlet extends HttpServlet {
             response.sendRedirect("Inicio.jsp");
             return;
         } else if ("Search".equalsIgnoreCase(action)) {
-            usuario = usuarioDao.getUsuario(cedula);
+            usuario = usuarioDao.getUsuarioByCedula(cedula);
             mostrarTabla = true;
+            request.setAttribute("usuario", usuario);
+            request.setAttribute("usuarios", null); // Set the usuarios attribute to null
+
         }
 
-        List<Usuario> usuarios = usuarioDao.getAllUsuarios();
+        List<Usuario> usuarios = usuarioDao.getUsuarioByCedulaLIST(cedulaStr);
 
         request.setAttribute("usuarios", usuarios);
-        request.setAttribute("usuario", usuario);
+        //request.setAttribute("usuario", usuario);
         request.setAttribute("mensaje", mensaje);
         request.setAttribute("mostrarTabla", mostrarTabla);
 

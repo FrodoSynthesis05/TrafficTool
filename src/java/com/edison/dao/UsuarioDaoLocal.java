@@ -27,6 +27,7 @@ public interface UsuarioDaoLocal {
     Usuario getUsuarioByCedula(int cedula);
 
     List<Usuario> getAllUsuarios();
+    List <Usuario>getUsuarioByCedulaLIST(String cedula);
     
  
 }

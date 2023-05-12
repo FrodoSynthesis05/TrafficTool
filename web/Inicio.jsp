@@ -77,6 +77,19 @@
                 color: #666;
             }
         </style>
+        <script>
+            function validateCredentials() {
+                var username = prompt("Enter administrator username:");
+                var password = prompt("Enter administrator password:");
+
+                // You can replace 'admin' and 'password' with your actual credentials
+                if (username === 'admin' && password === 'root') {
+                    window.location.href = 'gestionarUsuarios.jsp';
+                } else {
+                    alert('Invalid credentials. Please try again.');
+                }
+            }
+        </script>
     </head>
     <body>
         <div class="container">
@@ -92,7 +105,7 @@
 
 
 
-            <div class="option" onclick="location.href = 'verReportes.jsp';">
+            <div class="option" onclick="location.href = 'verReporte.jsp';">
                 <div class="option-image" style="background-image: url('imagenes/reporte.png');"></div>
                 <div class="option-text">
                     <h2>Ver reportes creados</h2>
@@ -100,12 +113,13 @@
                 </div>
             </div>
 
-            <div class="option" onclick="location.href = 'gestionarUsuarios.jsp';">
+            <div class="option" onclick="validateCredentials();">
                 <div class="option-image" style="background-image: url('imagenes/usuarios.png');"></div>
                 <div class="option-text">
                     <h2>Gestionar usuarios</h2>
                     <p>Agrega, modifica o elimina usuarios.</p>
                 </div>
+
             </div>
         </div>
     </body>

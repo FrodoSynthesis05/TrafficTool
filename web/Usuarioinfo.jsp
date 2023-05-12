@@ -85,7 +85,7 @@
             <p style="font-size: 24px; text-align: center;">${mensaje}</p>
         </c:if>
 
-        <form action="./UsuarioServlet" method="POST">
+        <form action="UsuarioServlet" method="POST">
             <table>
                 <tr>
                     <td>CEDULA</td>

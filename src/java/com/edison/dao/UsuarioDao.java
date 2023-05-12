@@ -60,6 +60,18 @@ public class UsuarioDao implements UsuarioDaoLocal {
     public List<Usuario> getAllUsuarios() {
         return em.createNamedQuery("Usuario.getAll").getResultList();
     }
+    
+    @Override
+    public List <Usuario>getUsuarioByCedulaLIST(String cedula) {
+        try {
+            Query query = em.createNamedQuery("Usuario.getByCedula");
+            query.setParameter("cedula", cedula);
+            Usuario usuario = (Usuario) query.getSingleResult();
+            return query.getResultList();
+        } catch (NoResultException e) {
+            return null;
+        }
+    }
 
     @Override
     public Usuario getUsuarioByUsername(String nombre) {
