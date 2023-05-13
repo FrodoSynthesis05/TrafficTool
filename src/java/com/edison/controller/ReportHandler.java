@@ -13,10 +13,7 @@ public class ReportHandler {
     private static final String DB_PASSWORD = "1234";
     private static int reportId;
 
-    public static void main(String[] args) {
-        // Example usage: call the saveReport method with the form data
-        //saveReport("falta de infraestructura", "Accidente en la calle principal", 37.7749, -122.4194, "Pare");
-    }
+
 
     public static void saveReport(String causa, String descripcion, double latitud, double longitud, String tipoSenal) {
         Connection conn = null;

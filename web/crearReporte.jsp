@@ -74,7 +74,7 @@
                         <option value="falta de infraestructura">Falta de infraestructura</option>
                         <option value="deterioro">Deterioro</option>
                         <option value="error humano">Error humano</option>
-                        <option value="señalizacion">Señalización</option>
+                        <option value="senalizacion">Senalización</option>
                         <option value="clima">Clima</option>
                         <option value="falla mecanica">Falla mecánica</option>
                     </select>

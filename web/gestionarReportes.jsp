@@ -47,7 +47,7 @@
                         <th>Descripción</th>
                         <th>Latitud</th>
                         <th>Longitud</th>
-                        <th>Tipo de Señal</th>
+                        <th>Tipo de Senal</th>
                         <th>Solución</th>
                         <th></th>
                     </tr>
@@ -81,29 +81,30 @@
                                 out.println("<td>" + tipoSenal + "</td>");
                                 out.println("<td>");
                                 out.println("<select name=\"solucion_" + reportId + "\">");
-                                out.println("<option value=\"Señal de Pare\">Señal de Pare</option>");
-                                out.println("<option value=\"Señal de Ceda el Paso\">Señal de Ceda el Paso</option>");
-                                out.println("<option value=\"Señal de Prohibido el Paso\">Señal de Prohibido el Paso</option>");
-                                out.println("<option value=\"Señal de Paso Peatonal\">Señal de Paso Peatonal</option>");
-                                out.println("<option value=\"Señal de Zona Escolar\">Señal de Zona Escolar</option>");
-                                out.println("<option value=\"Señal de Límite de Velocidad\">Señal de Límite de Velocidad</option>");
-                                out.println("<option value=\"Señal de Adelante con Precaución\">Señal de Adelante con Precaución</option>");
-                                out.println("<option value=\"Señal de No Adelantar\">Señal de No Adelantar</option>");
-                                out.println("<option value=\"Señal de Cruce de Peatones\">Señal de Cruce de Peatones</option>");
-                                out.println("<option value=\"Señal de Paso de Vehículos Pesados\">Señal de Paso de Vehículos Pesados</option>");
-                                out.println("<option value=\"Señal de Curva Peligrosa\">Señal de Curva Peligrosa</option>");
-                                out.println("<option value=\"Señal de Intersección en T\">Señal de Intersección en T</option>");
-                                out.println("<option value=\"Señal de Intersección en Y\">Señal de Intersección en Y</option>");
-                                out.println("<option value=\"Señal de Paso a Nivel\">Señal de Paso a Nivel</option>");
-                                out.println("<option value=\"Señal de Zona de Trabajo\">Señal de Zona de Trabajo</option>");
-                                out.println("<option value=\"Señal de Desvío Obligatorio\">Señal de Desvío Obligatorio</option>");
-                                out.println("<option value=\"Señal de Zona de Parqueo\">Señal de Zona de Parqueo</option>");
-                                out.println("<option value=\"Señal de Reductor de Velocidad\">Señal de Reductor de Velocidad</option>");
-                                out.println("<option value=\"Señal de Estacionamiento Prohibido\">Señal de Estacionamiento Prohibido</option>");
-                                out.println("<option value=\"Señal de Zona de Control de Velocidad\">Señal de Zona de Control de Velocidad</option>");
+                                out.println("<option value=\"Senal de Pare\">Seleccione un valor</option>");
+                                out.println("<option value=\"Senal de Pare\">Senal de Pare</option>");
+                                out.println("<option value=\"Senal de Ceda el Paso\">Senal de Ceda el Paso</option>");
+                                out.println("<option value=\"Senal de Prohibido el Paso\">Senal de Prohibido el Paso</option>");
+                                out.println("<option value=\"Senal de Paso Peatonal\">Senal de Paso Peatonal</option>");
+                                out.println("<option value=\"Senal de Zona Escolar\">Senal de Zona Escolar</option>");
+                                out.println("<option value=\"Senal de Límite de Velocidad\">Senal de Limite de Velocidad</option>");
+                                out.println("<option value=\"Senal de Adelante con Precaución\">Senal de Adelante con Precaucion</option>");
+                                out.println("<option value=\"Senal de No Adelantar\">Senal de No Adelantar</option>");
+                                out.println("<option value=\"Senal de Cruce de Peatones\">Senal de Cruce de Peatones</option>");
+                                out.println("<option value=\"Senal de Paso de Vehículos Pesados\">Senal de Paso de Vehiculos Pesados</option>");
+                                out.println("<option value=\"Senal de Curva Peligrosa\">Senal de Curva Peligrosa</option>");
+                                out.println("<option value=\"Senal de Intersección en T\">Senal de Interseccion en T</option>");
+                                out.println("<option value=\"Senal de Intersección en Y\">Senal de Interseccion en Y</option>");
+                                out.println("<option value=\"Senal de Paso a Nivel\">Senal de Paso a Nivel</option>");
+                                out.println("<option value=\"Senal de Zona de Trabajo\">Senal de Zona de Trabajo</option>");
+                                out.println("<option value=\"Senal de Desvío Obligatorio\">Senal de Desvio Obligatorio</option>");
+                                out.println("<option value=\"Senal de Zona de Parqueo\">Senal de Zona de Parqueo</option>");
+                                out.println("<option value=\"Senal de Reductor de Velocidad\">Senal de Reductor de Velocidad</option>");
+                                out.println("<option value=\"Senal de Estacionamiento Prohibido\">Senal de Estacionamiento Prohibido</option>");
+                                out.println("<option value=\"Senal de Zona de Control de Velocidad\">Senal de Zona de Control de Velocidad</option>");
                                 out.println("</select>");
                                 out.println("</td>");
-                                out.println("<td><input type=\"submit\" value=\"Actualizar\" formaction=\"successUpdate.jsp\"></td>");
+                                out.println("<td><input type=\"submit\" name=\"update_" + reportId + "\" value=\"Actualizar\"></td>");
                                 out.println("</tr>");
                             }
 

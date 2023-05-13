@@ -84,7 +84,7 @@
 
                 // You can replace 'admin' and 'password' with your actual credentials
                 if (username === 'admin' && password === 'root') {
-                    window.location.href = 'gestionarUsuarios.jsp';
+                    window.location.href = 'gestionar.jsp';
                 } else {
                     alert('Invalid credentials. Please try again.');
                 }
@@ -116,8 +116,8 @@
             <div class="option" onclick="validateCredentials();">
                 <div class="option-image" style="background-image: url('imagenes/usuarios.png');"></div>
                 <div class="option-text">
-                    <h2>Gestionar usuarios</h2>
-                    <p>Agrega, modifica o elimina usuarios.</p>
+                    <h2>Gestionar usuarios y reportes</h2>
+                    <p>Agrega, modifica o elimina usuarios y gestiona reportes.</p>
                 </div>
 
             </div>
