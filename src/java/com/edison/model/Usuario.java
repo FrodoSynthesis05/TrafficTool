@@ -39,18 +39,6 @@ public class Usuario implements Serializable {
         this.contrasena = contrasena;
     }
 
-    public int getCedula() {
-        return cedula;
-    }
-
-    public void setCedula(int cedula) {
-        this.cedula = cedula;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -61,6 +49,18 @@ public class Usuario implements Serializable {
 
     public void setContrasena(String contrasena) {
         this.contrasena = contrasena;
+    }
+
+    public int getCedula() {
+        return cedula;
+    }
+
+    public void setCedula(int cedula) {
+        this.cedula = cedula;
+    }
+
+    public String getNombre() {
+        return nombre;
     }
 
     public static Usuario getUsuarioByUsername(String nombre) {
