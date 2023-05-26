@@ -93,7 +93,7 @@
                     <a href="./Usuarioinfo.jsp" style="color: #007bff; text-decoration: none;">¿No tienes una cuenta? Regístrate aquí.</a>
                 </div>
 
-                <a href="./OlvidarContraseñainfo.jsp">¿Olvidaste tu contraseña?</a>
+                <a href="OlvidarContraseñainfo.jsp">¿Olvidaste tu contraseña?</a>
             </form>
         </div>
     </body>
