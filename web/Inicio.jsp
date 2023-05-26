@@ -1,9 +1,3 @@
-<%-- 
-    Document   : Inicio
-    Created on : 17/04/2023, 03:25:27 PM
-    Author     : EDISON
---%>
-
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
