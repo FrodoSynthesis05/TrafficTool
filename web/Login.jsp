@@ -1,9 +1,3 @@
-<%-- 
-    Document   : Login
-    Created on : 17/04/2023, 01:59:36 PM
-    Author     : EDISON
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
