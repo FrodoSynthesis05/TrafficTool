@@ -1,9 +1,3 @@
-<%-- 
-    Document   : OlvidarContraseñainfo
-    Created on : 18/04/2023, 12:03:26 PM
-    Author     : EDISON
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
