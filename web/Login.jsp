@@ -1,9 +1,3 @@
-<%-- 
-    Document   : Login
-    Created on : 17/04/2023, 01:59:36 PM
-    Author     : EDISON
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -99,7 +93,7 @@
                     <a href="./Usuarioinfo.jsp" style="color: #007bff; text-decoration: none;">¿No tienes una cuenta? Regístrate aquí.</a>
                 </div>
 
-                <a href="http://localhost:8080/U_TACTICO/OlvidarContrase%C3%B1ainfo.jsp">¿Olvidaste tu contraseña?</a>
+                <a href="./OlvidarContraseñainfo.jsp">¿Olvidaste tu contraseña?</a>
             </form>
         </div>
     </body>

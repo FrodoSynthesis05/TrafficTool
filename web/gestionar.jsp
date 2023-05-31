@@ -1,9 +1,3 @@
-<%-- 
-    Document   : gestionar
-    Created on : May 13, 2023, 2:30:18 PM
-    Author     : Julian
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -60,3 +54,4 @@
         </ul>
     </body>
 </html>
+//Finalizacion del metodo

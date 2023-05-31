@@ -39,7 +39,7 @@
     </head>
     <body>
         <h1>Gestionar Usuarios</h1>
-
+//  Ingreso a la gestion de usuarios
 
         <h2>Agregar/Editar Usuario</h2>
         <form method="POST" action="UsuarioServlet">
