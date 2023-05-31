@@ -77,7 +77,73 @@ Ya tenemos las configuraciones adecuadas para la interfaz de usuario, sin embarg
 
 Creación Base de Datos
 
-//ToDo
+Siga los pasos (imágenes) para la creación de la BD.
+![image](https://github.com/FrodoSynthesis05/TrafficTool/assets/72288240/cae81160-24c6-4846-9c41-fd1741896c67)
+![image](https://github.com/FrodoSynthesis05/TrafficTool/assets/72288240/dca412f7-bb1f-4e7d-8093-95f186f87266)
+
+
+BD NAME: “U_TACTICO”
+USUARIO: “CUALQUIERA”
+PASSWORD: “1234”
+![image](https://github.com/FrodoSynthesis05/TrafficTool/assets/72288240/07916fed-d553-4a96-8726-a055d8b3e278)
+![image](https://github.com/FrodoSynthesis05/TrafficTool/assets/72288240/307a691e-cf8e-473c-93f8-f91d625b2c75)
+
+
+Crear pool de conexiones:
+![image](https://github.com/FrodoSynthesis05/TrafficTool/assets/72288240/91bd8e8b-4245-4449-b694-3b634915cc62)
+![image](https://github.com/FrodoSynthesis05/TrafficTool/assets/72288240/4b7bf55d-e395-49b3-875c-428de6dbad06)
+![image](https://github.com/FrodoSynthesis05/TrafficTool/assets/72288240/bf8d2e56-990d-4bfd-b853-3f43a40d2638)
+
+
+
+
+
+Pool Name: “U_TACTICO_POOL”
+Resource Wpe: “java.sql.DataSource”
+Database Driver Vendor: “Java DB”
+
+![image](https://github.com/FrodoSynthesis05/TrafficTool/assets/72288240/dc5118f6-596c-4073-816f-612b13090e1d)
+
+Llene los datos: de database y password.
+
+
+Crear recurso:
+
+![image](https://github.com/FrodoSynthesis05/TrafficTool/assets/72288240/831acd39-90f6-49e1-b725-504c86d21a8f)
+![image](https://github.com/FrodoSynthesis05/TrafficTool/assets/72288240/4589f162-37fd-4d1a-8826-df62efcda60b)
+
+
+JNDI Name: jdbc/U_TACTICODB
+Pool Name: U_TACTICO_POOL
+![image](https://github.com/FrodoSynthesis05/TrafficTool/assets/72288240/a5142446-b45e-4f9d-91f7-05112b80574c)
+![image](https://github.com/FrodoSynthesis05/TrafficTool/assets/72288240/aa80f7f6-6e7c-40a7-b8e0-cb7045392a69)
+
+
+
+Ejecuta la siguiente query para la creación de la tabla.
+CREATE TABLE Usuario (
+cedula INTEGER PRIMARY KEY NOT NULL,
+nombre VARCHAR(50) NOT NULL,
+contrasena VARCHAR(50) NOT NULL
+);
+
+
+
+
+
+Realice el mismo procedimiento para la otra tabla.
+
+CREATE TABLE Reportes(
+reporte_id INTEGER PRIMARY KEY NOT NULL,
+causa VARCHAR(50) NOT NULL,
+descripcion VARCHAR(100) NOT NULL,
+latitud DECIMAL(11, 8),
+longitud DECIMAL(11, 8),
+tipo_senal VARCHAR(100) NOT NULL,
+solucion VARCHAR(100) NOT NULL,
+FOREIGN KEY (reporte_id) REFERENCES Usuario(cedula)
+);
+
 
 Despliegue
 Una vez tengamos todos los prerrequisitos instalados y correctamente configurados, lo único que resta es correr el proyecto para acceder a la pagina web. El primer paso es inicializar Glassfish; para esto nos dirigimos a Services -> Servers -> GlassFish Server -> (Click derecho) Start:  
