@@ -85,28 +85,28 @@
             <p style="font-size: 24px; text-align: center;">${mensaje}</p>
         </c:if>
 
-        <form action="UsuarioServlet" method="POST">
-            <table>
-                <tr>
-                    <td>CEDULA</td>
-                    <td><input type="text" name="cedula" value="${usu.cedula}" required/></td>
-                </tr>
-                <tr>
-                    <td>NOMBRE</td>
-                    <td><input type="text" name="nombre" value="${usu.nombre}" required/></td>
-                </tr>
-                <tr>
-                    <td>CONTRASEÑA</td>
-                    <td><input type="password" name="contrasena" value="${usu.contrasena}" required/></td>
-                </tr>
+     <form action="Inicio.jsp" method="POST">
+    <table>
+        <tr>
+            <td>CEDULA</td>
+            <td><input type="text" name="cedula" value="${usu.cedula}" required/></td>
+        </tr>
+        <tr>
+            <td>NOMBRE</td>
+            <td><input type="text" name="nombre" value="${usu.nombre}" required/></td>
+        </tr>
+        <tr>
+            <td>CONTRASEÑA</td>
+            <td><input type="password" name="contrasena" value="${usu.contrasena}" required/></td>
+        </tr>
 
-                <tr>
-                    <td colspan="2" style="text-align: center; margin-top: 20px;">
-                        <input type="submit" name="action" value="Add" />
-                    </td>
-                </tr>
-            </table>
-        </form>
+        <tr>
+            <td colspan="2" style="text-align: center; margin-top: 20px;">
+                <input type="submit" name="action" value="Add" />
+            </td>
+        </tr>
+    </table>
+</form>
 
         <c:if test="${not empty usuario and empty mensaje and mostrarTabla}">
             <table border="1">
